@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "jsx": "react-jsx",
+    "jsxImportSource": "reconciler",
+    "paths": {
+      "reconciler/jsx-runtime": ["./src/jsx-runtime.ts"],
+      "reconciler/jsx-dev-runtime": ["./src/jsx-dev-runtime.ts"],
+      "reconciler": ["./src/index.ts"]
+    },
+    "types": []
+  },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules", "demo"]
+}

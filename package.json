@@ -1,0 +1,49 @@
+{
+  "name": "reconciler",
+  "version": "0.1.0",
+  "description": "A miniature React-like UI library with a fiber reconciler, time-slicing scheduler, keyed reconciliation, and hooks — built from scratch to demonstrate how React works under the hood.",
+  "type": "module",
+  "license": "MIT",
+  "author": "reconciler contributors",
+  "keywords": [
+    "react",
+    "fiber",
+    "reconciler",
+    "virtual-dom",
+    "hooks",
+    "scheduler",
+    "time-slicing"
+  ],
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./jsx-runtime": {
+      "types": "./dist/jsx-runtime.d.ts",
+      "import": "./dist/jsx-runtime.js"
+    },
+    "./jsx-dev-runtime": {
+      "types": "./dist/jsx-dev-runtime.d.ts",
+      "import": "./dist/jsx-dev-runtime.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "happy-dom": "^15.11.7",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
